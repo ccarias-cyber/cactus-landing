@@ -155,6 +155,10 @@ h1{margin-bottom:14px}
 .case h3{margin:14px 2px 4px;color:var(--head);font:500 18px/1.3 "Kmr Apparat",Arial,sans-serif}
 .case p{margin:0 2px;color:var(--muted);font-size:15px}
 @media (max-width:991px){.case-grid{grid-template-columns:1fr;max-width:560px}}
+/* Alternating light sections */
+.light{background:#fff;--head:#16272f;--text:#2b3c44;--muted:#16272fa6;--line:#16272f1f;color:var(--text)}
+.light .eyebrow b{color:var(--clay)}
+.cases{padding-top:100px}
 </style>
 </head>
 <body>
@@ -166,7 +170,7 @@ h1{margin-bottom:14px}
 </header>
 
 <main>
-  <section class="hero">
+  <section class="hero light">
     <div class="wrap">
       <p class="eyebrow"><b>&#10003; You're all set</b></p>
       <h1>Your Cactus Introduction Call <em>is Booked</em></h1>
@@ -200,7 +204,7 @@ h1{margin-bottom:14px}
     </div>
   </section>
 
-  <section class="cases" id="case-studies">
+  <section class="cases light" id="case-studies">
     <div class="wrap">
       <h2>Case Studies and <em>Testimonials</em></h2>
       <p class="step">Step 3: Review our results</p>
