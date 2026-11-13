@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Cactus | Let AI run your office</title>
+<meta name="description" content="Cactus answers every call, books every lead, and goes after the revenue already sitting in your business. Day and night.">
+<meta property="og:title" content="Cactus | Let AI run your office">
+<meta property="og:description" content="Cactus answers every call, books every lead, and goes after the revenue already sitting in your business. Day and night.">
+<meta property="og:image" content="poster.jpg">
+<meta name="theme-color" content="#16272f">
+<link rel="icon" href="assets/ico.png">
+<link rel="apple-touch-icon" href="assets/webclip.png">
+<link rel="preload" href="assets/KMR-Apparat-Medium.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/aeonik-regular.woff2" as="font" type="font/woff2" crossorigin>
+<style>
+@font-face{font-family:"Kmr Apparat";src:url(assets/KMR-Apparat-Light.woff2) format("woff2");font-weight:300;font-display:swap}
+@font-face{font-family:"Kmr Apparat";src:url(assets/KMR-Apparat-Regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Kmr Apparat";src:url(assets/KMR-Apparat-Medium.woff2) format("woff2");font-weight:500;font-display:swap}
+@font-face{font-family:"Aeonik";src:url(assets/aeonik-regular.woff2) format("woff2");font-weight:400;font-display:swap}
+@font-face{font-family:"Aeonik";src:url(assets/aeonik-bold.woff2) format("woff2");font-weight:700;font-display:swap}
+:root{
+  --bg:#16272f; --nav:#2b3c44; --clay:#d66346; --clay-border:#da6b4f;
+  --head:#d5d9da; --text:#f9f8f4db; --muted:#f9f8f4ad; --line:#f9f8f41f;
+  --blue:#38a2bc; --yellow:#f2b53d; --purple:#9462db;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--bg);color:var(--text);font-family:Aeonik,Arial,sans-serif;font-size:17px;line-height:1.55;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.wrap{max-width:1240px;margin:0 auto;padding:0 24px}
+
+/* Header */
+.nav{position:sticky;top:0;z-index:20;background:var(--nav);border-bottom:1px solid var(--line)}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px;max-width:none;padding-left:24px;padding-right:0}
+.logo{display:inline-flex;color:#f9f8f4}
+.logo-svg{height:26px;width:auto;display:block}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;color:var(--clay);border:.5px solid var(--clay-border);background:transparent;text-transform:uppercase;letter-spacing:.04em;font:400 14px/14px Aeonik,Arial,sans-serif;text-decoration:none;transition:color .4s,background-color .4s;cursor:pointer}
+.btn:hover,.btn:focus-visible{color:#fff;background:var(--clay)}
+.chev{width:7px;height:7px;border-top:1.5px solid;border-right:1.5px solid;transform:rotate(45deg)}
+.nav .btn{height:64px;padding:0 40px;border-top:0;border-bottom:0;border-right:0}
+
+/* Hero */
+.hero{padding:44px 0 72px;text-align:center}
+.eyebrow{font:400 13px/1 Aeonik,Arial,sans-serif;text-transform:uppercase;letter-spacing:.14em;color:var(--muted);margin:0 0 18px}
+.eyebrow b{color:var(--clay);font-weight:400}
+h1{margin:0 auto 28px;max-width:1100px;color:var(--head);font-family:"Kmr Apparat",Arial,sans-serif;font-weight:500;letter-spacing:-.02em;line-height:1.05;font-size:clamp(34px,3.7vw,56px)}
+h1 em{color:var(--clay);font-style:normal}
+
+.video-shell{position:relative;margin:0 auto;width:min(100%, 1120px, calc((100svh - 290px) * 16 / 9));min-width:min(100%,640px)}
+.video-frame{position:relative;aspect-ratio:16/9;border-radius:16px;overflow:hidden;background:#3a474d linear-gradient(135deg,#46545a,#2f3b41);box-shadow:0 0 0 1px var(--line),0 30px 80px -20px rgba(0,0,0,.6)}
+.video-frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;display:block;background:transparent}
+.sound{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);display:inline-flex;align-items:center;gap:14px;padding:14px 26px 14px 14px;border:0;border-radius:999px;background:rgba(22,39,47,.82);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);color:#f9f8f4;font:700 15px/1 Aeonik,Arial,sans-serif;letter-spacing:.02em;cursor:pointer;box-shadow:0 0 0 1px var(--line),0 10px 30px rgba(0,0,0,.35);transition:transform .25s,background .25s}
+.sound:hover{background:rgba(214,99,70,.95);transform:translate(-50%,-50%) scale(1.04)}
+.sound .ic{width:48px;height:48px;border-radius:50%;background:var(--clay);display:grid;place-items:center;flex:none}
+.sound:hover .ic{background:#16272f}
+.sound svg{width:20px;height:20px;fill:#fff}
+.sound .ring{position:absolute;left:14px;top:14px;width:48px;height:48px;border-radius:50%;box-shadow:0 0 0 0 rgba(214,99,70,.6);animation:pulse 2s infinite}
+@keyframes pulse{to{box-shadow:0 0 0 18px rgba(214,99,70,0)}}
+@media (prefers-reduced-motion:reduce){.sound .ring{animation:none}}
+.is-hidden{opacity:0;pointer-events:none;transition:opacity .3s}
+.mute-chip{position:absolute;right:14px;top:14px;display:none;align-items:center;gap:8px;padding:8px 14px;border:0;border-radius:999px;background:rgba(22,39,47,.8);color:#f9f8f4;font:400 13px/1 Aeonik,Arial,sans-serif;cursor:pointer}
+.mute-chip.show{display:inline-flex}
+
+.lede{max-width:680px;margin:36px auto 32px;color:var(--muted);font-size:clamp(18px,1.6vw,21px);line-height:1.55}
+.cta-row{display:flex;flex-direction:column;align-items:center;gap:18px}
+.cta-row .btn{width:350px;max-width:100%;height:74px}
+.call{font-size:15px;color:var(--muted)}
+.call a{color:var(--head);text-decoration:none;border-bottom:1px solid var(--line)}
+.call a:hover{color:var(--clay)}
+
+/* Stats strip */
+.strip{border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.stats{display:grid;grid-template-columns:repeat(4,1fr)}
+.stat{padding:44px 24px;text-align:center;border-left:1px solid var(--line)}
+.stat:first-child{border-left:0}
+.stat-num{color:var(--clay);font-family:"Kmr Apparat",Arial,sans-serif;font-weight:300;letter-spacing:-.03em;font-size:clamp(40px,4.2vw,60px);line-height:1}
+.stat-label{margin-top:10px;color:var(--text);font-size:16px}
+
+/* Pam */
+.pam{padding:110px 0}
+.pam-grid{display:grid;grid-template-columns:1fr 1fr;gap:72px;align-items:center}
+h2{margin:0 0 20px;color:var(--head);font-family:"Kmr Apparat",Arial,sans-serif;font-weight:500;letter-spacing:-.02em;line-height:1;font-size:clamp(34px,4.6vw,60px)}
+h2 em{color:var(--clay);font-style:normal}
+.pam p{color:var(--muted);margin:0;font-size:clamp(18px,1.6vw,21px)}
+.list{list-style:none;margin:0;padding:0}
+.list li{display:flex;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);font-size:17px}
+.list li:first-child{border-top:1px solid var(--line)}
+.arrow{color:var(--clay)}
+.crm{margin-top:28px;font-size:14px;color:var(--muted);letter-spacing:.02em}
+.crm strong{color:var(--head);font-weight:400}
+
+/* Final CTA */
+.final{padding:110px 0;background:#1b2f38;border-top:1px solid var(--line);text-align:center;overflow:hidden}
+.mascot{width:220px;max-width:60%;height:auto;margin:0 auto 28px;display:block;animation:float 6s ease-in-out infinite}
+@keyframes float{50%{transform:translateY(-10px)}}
+@media (prefers-reduced-motion:reduce){.mascot{animation:none}}
+.final .cta-row{margin-top:36px}
+
+footer{padding:32px 0;border-top:1px solid var(--line);font-size:14px;color:var(--muted)}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.foot nav{display:flex;gap:22px;flex-wrap:wrap}
+.foot a{text-decoration:none}
+.foot a:hover{color:var(--clay)}
+
+@media (max-width:991px){
+  .pam-grid{grid-template-columns:1fr;gap:40px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(3){border-left:0}
+  .stat:nth-child(n+3){border-top:1px solid var(--line)}
+}
+@media (max-width:640px){
+  .nav-inner{height:60px;padding-left:20px}
+  .logo-svg{height:22px}
+  .nav .btn{height:60px;padding:0 20px;font-size:12px}
+  .hero{padding:28px 0 56px}
+  .eb-extra{display:none}
+  .wrap{padding:0 20px}
+  .video-shell{width:100%;min-width:0}
+  .video-frame{border-radius:12px}
+  .sound{padding:10px 18px 10px 10px;font-size:14px;gap:10px;white-space:nowrap}
+  .sound .ic,.sound .ring{width:40px;height:40px}
+  .sound .ring{left:10px;top:10px}
+  .lede{margin:28px auto 26px}
+  .cta-row .btn{width:100%;height:64px}
+  .stat{padding:30px 12px}
+  .pam,.final{padding:72px 0}
+  .foot{flex-direction:column;align-items:flex-start}
+}
+</style>
+</head>
+<body>
+<header class="nav">
+  <div class="wrap nav-inner">
+    <a class="logo" href="https://oncactus.com" aria-label="Cactus home"><svg class="logo-svg" viewBox="0 0 137.2 30.41" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Cactus"><path fill="#38a2bc" d="M7.29,18.86c0-2.02-1.63-3.66-3.65-3.66s-3.65,1.64-3.65,3.66,1.63,3.66,3.65,3.66,3.65-1.64,3.65-3.66Z"></path><path fill="#f2b53d" d="M23.03,11.55c0-2.02-1.63-3.66-3.65-3.66s-3.65,1.64-3.65,3.66,1.63,3.66,3.65,3.66,3.65-1.64,3.65-3.66Z"></path><path fill="#d66346" d="M12.68,15.78c2,0,3.65,1.65,3.65,3.66v10.97h-3.65c-2,0-3.65-1.65-3.65-3.66v-7.31c0-2.01,1.64-3.66,3.65-3.66Z"></path><path fill="currentColor" d="M42.21,27.11c-3.63,0-6.54-1.1-8.75-3.3-2.2-2.21-3.3-5.09-3.3-8.63s1.17-6.3,3.5-8.53c2.34-2.24,5.22-3.36,8.64-3.36,1.11,0,2.15.12,3.12.36.97.24,1.89.62,2.76,1.13.87.51,1.55,1.01,2.06,1.51.51.5.76.75.76.75l-2.89,3.11s-.18-.18-.54-.54c-.35-.36-.8-.71-1.35-1.05-.55-.34-1.14-.6-1.78-.78-.62-.19-1.36-.29-2.2-.29-2.05,0-3.81.71-5.28,2.13-1.47,1.42-2.2,3.28-2.2,5.6s.72,4.14,2.17,5.57c1.45,1.42,3.19,2.13,5.23,2.13.79,0,1.54-.1,2.25-.3.71-.2,1.37-.49,2-.87.62-.39,1.14-.78,1.54-1.17.4-.4.6-.6.6-.6l2.97,2.89s-.26.3-.79.89c-.52.58-1.25,1.15-2.2,1.71-.94.55-1.95.96-3.01,1.24-1.06.29-2.16.43-3.31.43Z"></path><path fill="currentColor" d="M66.43,9.57v2.43h-.1c-.55-.86-1.33-1.57-2.35-2.14-1.01-.57-2.19-.86-3.54-.86-2.34,0-4.29.84-5.85,2.52-1.56,1.68-2.35,3.86-2.35,6.53s.8,4.92,2.41,6.58c1.61,1.65,3.53,2.47,5.77,2.47,1.5,0,2.74-.29,3.73-.86.98-.58,1.7-1.21,2.16-1.89h.11v2.19h4.28V9.57h-4.28ZM65.21,22.06c-.89.96-2.09,1.44-3.62,1.44s-2.62-.49-3.52-1.48c-.9-.99-1.35-2.32-1.35-3.98s.45-2.92,1.35-3.92c.9-.99,2.08-1.49,3.54-1.49s2.63.5,3.55,1.51c.92.99,1.38,2.31,1.38,3.95s-.44,3-1.33,3.96Z"></path><path fill="currentColor" d="M82.13,27.11c-2.79,0-5.04-.86-6.74-2.57-1.69-1.71-2.54-3.87-2.54-6.49s.84-4.75,2.52-6.47c1.69-1.73,3.99-2.6,6.9-2.6.92,0,1.75.1,2.49.3.74.19,1.44.48,2.11.87.67.38,1.42.98,2.25,1.81l-2.79,2.66c-.55-.53-1.01-.91-1.4-1.14-.37-.24-.78-.42-1.22-.54-.43-.12-.93-.17-1.47-.17-1.42,0-2.59.49-3.52,1.47-.93.97-1.4,2.24-1.4,3.81s.48,2.87,1.43,3.82c.95.95,2.11,1.43,3.47,1.43.6,0,1.15-.07,1.63-.22.49-.15.93-.35,1.32-.62.4-.27.87-.71,1.4-1.3l3.09,2.33c-.79.99-1.55,1.72-2.27,2.19-.71.47-1.51.82-2.39,1.06-.89.24-1.85.36-2.87.36Z"></path><path fill="currentColor" d="M98.4,10.13h3.81v3.52h-3.81v13.46h-4.38v-13.46h-3.65v-3.52h3.65v-4.27h4.38v4.27Z"></path><path fill="currentColor" d="M116.2,9.57v9.85c0,1.22-.39,2.21-1.16,2.98-.76.77-1.71,1.16-2.84,1.16s-2.03-.28-2.62-.84c-.58-.56-.87-1.5-.87-2.81v-10.34h-4.38v11.36c0,1.95.53,3.46,1.6,4.55,1.07,1.09,2.6,1.63,4.6,1.63,1.33,0,2.49-.28,3.47-.84.98-.57,1.74-1.26,2.28-2.06h.11v2.35h4.17V9.57h-4.38Z"></path><path fill="currentColor" d="M130.2,27.11c-1.25,0-2.31-.16-3.19-.48-.88-.31-1.64-.73-2.3-1.27-.64-.55-1.14-1.09-1.49-1.63-.34-.54-.51-.81-.51-.81l2.85-1.9s.13.2.4.6c.28.4.61.78,1.01,1.13.41.34.89.6,1.43.78.55.17,1.16.25,1.84.25.88,0,1.58-.17,2.11-.51.53-.35.79-.81.79-1.4,0-.61-.27-1.08-.82-1.41-.54-.34-1.54-.69-3.01-1.05-2.18-.54-3.7-1.23-4.55-2.06-.85-.85-1.27-1.96-1.27-3.35,0-1.5.62-2.71,1.85-3.63,1.25-.93,2.85-1.4,4.81-1.4.94,0,1.78.1,2.52.3.74.19,1.41.48,2,.86.6.37,1.09.77,1.47,1.21.39.42.59.63.59.63l-2.81,2.08s-.13-.14-.4-.41c-.25-.27-.55-.51-.9-.71-.35-.21-.72-.36-1.13-.46-.4-.11-.86-.16-1.36-.16-.82,0-1.48.15-1.97.46-.48.31-.71.7-.71,1.17,0,.43.21.8.62,1.11.41.3,1.57.7,3.47,1.22,1.98.53,3.41,1.21,4.3,2.03.9.81,1.35,1.92,1.35,3.31,0,1.65-.66,2.98-1.98,3.98-1.31,1-2.98,1.51-5.01,1.51Z"></path><path fill="#9462db" d="M10.35,14.62c-2,0-3.650-1.65-3.65-3.66V0h3.65c2,0,3.65,1.65,3.65,3.66v7.31c0,2.01-1.64,3.66-3.65,3.66Z"></path></svg></a>
+    <a class="btn" href="https://cal.com/ajith747/cactus" target="_blank" rel="noopener">Book a demo <span class="chev"></span></a>
+  </div>
+</header>
+
+<main>
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow"><b>Your AI Growth Partner</b><span class="eb-extra"> &nbsp;·&nbsp; Built for trades</span></p>
+      <h1>Stop juggling vendors. <em>Let AI run your office.</em></h1>
+
+      <div class="video-shell">
+        <div class="video-frame">
+          <video id="hero-video" src="video.mp4" poster="poster.jpg" playsinline muted autoplay preload="metadata" aria-label="Cactus video"></video>
+          <button class="sound" id="sound-btn" type="button" aria-label="Play video with sound">
+            <span class="ring" aria-hidden="true"></span>
+            <span class="ic" aria-hidden="true"><svg viewBox="0 0 24 24"><path d="M8 5.5v13a1 1 0 0 0 1.5.86l10.5-6.5a1 1 0 0 0 0-1.72L9.5 4.64A1 1 0 0 0 8 5.5z"/></svg></span>
+            <span>Watch with sound</span>
+          </button>
+          <button class="mute-chip" id="mute-chip" type="button">🔇 Tap to unmute</button>
+        </div>
+      </div>
+
+      <p class="lede">Cactus answers every call, books every lead, and goes after the revenue already sitting in your business. Day and night.</p>
+      <div class="cta-row">
+        <a class="btn" href="https://cal.com/ajith747/cactus" target="_blank" rel="noopener">Book a demo <span class="chev"></span></a>
+        <div class="call">Prefer a real person? Call us at <a href="tel:+16506292667">(650) 629-2667</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="strip" aria-label="Cactus by the numbers">
+    <div class="wrap stats">
+      <div class="stat"><div class="stat-num">53K+</div><div class="stat-label">calls handled by Pam</div></div>
+      <div class="stat"><div class="stat-num">24/7</div><div class="stat-label">coverage, every day of the year</div></div>
+      <div class="stat"><div class="stat-num">90%+</div><div class="stat-label">customer retention</div></div>
+      <div class="stat"><div class="stat-num">20+</div><div class="stat-label">states across the U.S.</div></div>
+    </div>
+  </section>
+
+  <section class="pam">
+    <div class="wrap pam-grid">
+      <div>
+        <h2>Meet Pam.<br><em>She picks up when your team can't.</em></h2>
+        <p>Every call answered. Every lead followed up. Every opportunity tracked from first ring to final payment, day or night.</p>
+      </div>
+      <div>
+        <ul class="list">
+          <li><span class="arrow">→</span>Answers in seconds, day or night, in English and Spanish</li>
+          <li><span class="arrow">→</span>Books jobs directly into your CRM</li>
+          <li><span class="arrow">→</span>Warm outbound calls on web leads and open estimates</li>
+          <li><span class="arrow">→</span>Hands off to your team when a personal touch is needed</li>
+        </ul>
+        <p class="crm">Works with <strong>Jobber · JobNimbus · Housecall Pro · AccuLynx · Pipedrive</strong></p>
+      </div>
+    </div>
+  </section>
+
+  <section class="final">
+    <div class="wrap">
+      <img class="mascot" src="assets/cactus-mascot-superhero.svg" alt="Cactus mascot flying like a superhero" loading="lazy">
+      <h2>See how Cactus works<br><em>with your business.</em></h2>
+      <div class="cta-row">
+        <a class="btn" href="https://cal.com/ajith747/cactus" target="_blank" rel="noopener">Book a demo <span class="chev"></span></a>
+        <div class="call">Prefer a real person? Call us at <a href="tel:+16506292667">(650) 629-2667</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap foot">
+    <span>© Cravd Inc. 2026. All rights reserved.</span>
+    <nav>
+      <a href="https://oncactus.com" target="_blank" rel="noopener">oncactus.com</a>
+      <a href="https://oncactus.com/privacy" target="_blank" rel="noopener">Privacy Policy</a>
+      <a href="https://oncactus.com/terms" target="_blank" rel="noopener">Terms of Service</a>
+      <a href="https://www.linkedin.com/company/oncactus" target="_blank" rel="noopener">LinkedIn</a>
+      <a href="https://x.com/oncactusai" target="_blank" rel="noopener">X</a>
+    </nav>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var v=document.getElementById('hero-video'),
+      btn=document.getElementById('sound-btn'),
+      chip=document.getElementById('mute-chip'),
+      started=false;
+  function playWithSound(){
+    started=true; v.controls=true;
+    v.muted=false; v.volume=1;
+    try{ v.currentTime=0; }catch(e){}
+    var p=v.play(); if(p&&p.catch) p.catch(function(){});
+    btn.classList.add('is-hidden'); chip.classList.remove('show');
+  }
+  btn.addEventListener('click',playWithSound);
+  chip.addEventListener('click',function(){ v.muted=false; chip.classList.remove('show'); });
+  // If muted autoplay is running, keep the big button so people know there is sound.
+  v.addEventListener('volumechange',function(){
+    if(!v.muted){ v.controls=true; btn.classList.add('is-hidden'); chip.classList.remove('show'); started=true; }
+    else if(started && !v.paused){ chip.classList.add('show'); }
+  });
+  v.addEventListener('play',function(){ if(started && v.muted) chip.classList.add('show'); });
+  v.addEventListener('ended',function(){ started=false; v.muted=true; btn.classList.remove('is-hidden'); btn.lastElementChild.textContent='Watch again'; });
+})();
+</script>
+</body>
+</html>
