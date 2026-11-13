@@ -289,7 +289,19 @@ h1{margin-bottom:14px}
 })();
 </script>
 <script>
-document.querySelectorAll('.short-frame.has-video').forEach(function(f){var v=f.querySelector('video'),c=f.querySelector('.cover');c.addEventListener('click',function(){f.classList.add('playing');v.controls=true;v.muted=false;v.play();});});
+(function(){
+  var frames=[].slice.call(document.querySelectorAll('.short-frame.has-video'));
+  function reset(f){var v=f.querySelector('video');v.pause();v.controls=false;f.classList.remove('playing');try{v.currentTime=0;}catch(e){}v.load();}
+  frames.forEach(function(f){
+    var v=f.querySelector('video'),c=f.querySelector('.cover');
+    c.addEventListener('click',function(){
+      frames.forEach(function(o){if(o!==f&&o.classList.contains('playing'))reset(o);});
+      f.classList.add('playing');v.controls=true;v.muted=false;v.play();
+    });
+    v.addEventListener('ended',function(){if(document.fullscreenElement===v&&document.exitFullscreen)document.exitFullscreen();reset(f);});
+    v.addEventListener('webkitendfullscreen',function(){if(v.ended)reset(f);});
+  });
+})();
 </script>
 </body>
 </html>
