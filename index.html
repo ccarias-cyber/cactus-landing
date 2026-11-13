@@ -159,6 +159,24 @@ h1{margin-bottom:14px}
 .light{background:#fff;--head:#16272f;--text:#2b3c44;--muted:#16272fa6;--line:#16272f1f;color:var(--text)}
 .light .eyebrow b{color:var(--clay)}
 .cases{padding-top:100px}
+/* Gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:200px;grid-auto-flow:dense;gap:16px;max-width:1120px;margin:0 auto}
+.g{position:relative;border-radius:16px;overflow:hidden;background:#3a474d linear-gradient(160deg,#46545a,#2a363c);box-shadow:0 20px 50px -24px rgba(0,0,0,.45);display:grid;place-items:center;text-align:left}
+.g.big{grid-column:span 2;grid-row:span 2}
+.g.wide{grid-column:span 2}
+.g.tall{grid-row:span 2}
+.g video,.g img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.g .ph{width:52px;height:52px;border-radius:50%;background:rgba(214,99,70,.92);display:grid;place-items:center}
+.g.big .ph{width:72px;height:72px}
+.g .ph svg{width:20px;height:20px;fill:#fff;margin-left:3px}
+.g .cap{position:absolute;left:0;right:0;bottom:0;padding:14px 16px;background:linear-gradient(transparent,rgba(22,39,47,.85));color:#f9f8f4;font:500 15px/1.3 "Kmr Apparat",Arial,sans-serif}
+.g .cap small{display:block;font:400 12px/1.4 Aeonik,Arial,sans-serif;color:#f9f8f4b3;text-transform:uppercase;letter-spacing:.1em;margin-bottom:2px}
+.g.quote{background:#f4efe9;place-items:start;padding:24px}
+.g.quote .qm{font:500 56px/0.8 "Kmr Apparat",Arial,sans-serif;color:var(--clay)}
+.g.quote p{margin:8px 0 0;color:#16272f;font:500 18px/1.35 "Kmr Apparat",Arial,sans-serif}
+.g.quote span{position:absolute;left:24px;bottom:20px;color:#16272fa6;font-size:13px}
+@media (max-width:991px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:170px}}
+@media (max-width:560px){.gallery{grid-template-columns:1fr;grid-auto-rows:200px}.g.big,.g.wide{grid-column:span 1}}
 </style>
 </head>
 <body>
@@ -208,10 +226,14 @@ h1{margin-bottom:14px}
     <div class="wrap">
       <h2>Case Studies and <em>Testimonials</em></h2>
       <p class="step">Step 3: Review our results</p>
-      <div class="case-grid">
-        <div class="case"><div class="case-frame"><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><h3>Case study 1 coming soon</h3><p>Customer story</p></div>
-        <div class="case"><div class="case-frame"><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><h3>Case study 2 coming soon</h3><p>Customer story</p></div>
-        <div class="case"><div class="case-frame"><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div></div><h3>Testimonial 1 coming soon</h3><p>Customer story</p></div>
+      <div class="gallery">
+        <div class="g big"><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="cap"><small>Featured case study</small>Case study 1 coming soon</div></div>
+        <div class="g quote "><div><div class="qm">&ldquo;</div><p>Customer quote 1 coming soon</p></div><span>Name, Company</span></div>
+        <div class="g tall"><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="cap"><small>Video testimonial</small>Testimonial 1 coming soon</div></div>
+        <div class="g "><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="cap"><small>Video testimonial</small>Testimonial 2 coming soon</div></div>
+        <div class="g wide"><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="cap"><small>Case study</small>Case study 2 coming soon</div></div>
+        <div class="g quote "><div><div class="qm">&ldquo;</div><p>Customer quote 2 coming soon</p></div><span>Name, Company</span></div>
+        <div class="g "><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="cap"><small>Video testimonial</small>Testimonial 3 coming soon</div></div>
       </div>
     </div>
   </section>
