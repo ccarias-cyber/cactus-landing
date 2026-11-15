@@ -181,10 +181,15 @@ h1{margin-bottom:14px}
 .gallery.two{grid-template-columns:repeat(2,1fr);grid-auto-rows:auto;gap:24px;max-width:1040px}
 .gallery.two .g{aspect-ratio:16/9}
 .gallery .g.g-logo{background:#14282f;text-decoration:none;transition:transform .25s ease,box-shadow .25s ease}
-.gallery .g-logo img{position:static;width:44%;height:auto;object-fit:contain;margin-bottom:52px;transition:transform .3s ease}
+.gallery .g-logo img{position:static;width:38%;height:auto;object-fit:contain;margin-bottom:120px;transition:transform .3s ease}
 .g-logo:hover{transform:translateY(-4px);box-shadow:0 28px 60px -24px rgba(0,0,0,.55)}
 .g-logo:hover img{transform:scale(1.04)}
-.gallery .g-logo .cap{display:flex;flex-direction:column;background:none}
+@media(max-width:700px){.gallery.two .g.g-logo{aspect-ratio:1/1}.gallery .g-logo img{width:50%;margin-bottom:150px}.g-stat{max-width:56%}}
+.g-stat{position:absolute;right:16px;bottom:14px;max-width:48%;text-align:right;color:#fff;font:400 11px/1.35 Aeonik,Arial,sans-serif}
+.g-stat strong{display:block;font:700 clamp(30px,3.2vw,44px)/1 Aeonik,Arial,sans-serif;letter-spacing:-.02em;margin-bottom:6px}
+.g-stat b{display:block;font-weight:700;font-size:12px}
+.g-stat span{display:block;opacity:.85}
+.gallery .g-logo .cap{right:auto;max-width:50%;display:flex;flex-direction:column;background:none}
 .g-logo .cap .arr{margin-top:4px;color:var(--clay);font:500 13px/1.3 Aeonik,Arial,sans-serif}
 @media (max-width:700px){.gallery.two{grid-template-columns:1fr}}
 .short-frame .len.top{top:10px;bottom:auto;pointer-events:none}
@@ -258,8 +263,10 @@ h1{margin-bottom:14px}
       <h2>Case Studies and <em>Testimonials</em></h2>
       <p class="step">Step 3: Review our results</p>
       <div class="gallery two">
-        <a class="g g-logo" href="https://www.oncactus.com/roofing-case-study" target="_blank" rel="noopener" aria-label="Read the Gaston Roofing case study"><img src="logos/gaston-roofing.png" alt="Gaston Roofing logo"><div class="cap"><small>Case study</small>Gaston Roofing <span class="arr">Read the case study &rarr;</span></div></a>
-        <div class="g"><div class="ph"><svg viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg></div><div class="cap"><small>Case study</small>Case study 2 coming soon</div></div>
+        <a class="g g-logo" href="https://www.oncactus.com/roofing-case-study" target="_blank" rel="noopener" aria-label="Read the Gaston Roofing case study"><img src="logos/gaston-roofing.png" alt="Gaston Roofing logo"><div class="cap"><small>Case study</small><span class="arr">Read the case study &rarr;</span></div><div class="g-stat"><strong>$144,394</strong><b>Billed invoice value traced to Cactus calls</b><span>31 July invoices across 30 unique customers whose calls Cactus handled.</span></div></a>
+        <a class="g g-logo" href="https://www.oncactus.com/plumbing-case-study" target="_blank" rel="noopener" aria-label="Read the Upfront Plumbing case study"><img src="logos/upfront.png" alt="Upfront Plumbing, Drains, Heating and Air logo"><div class="cap"><small>Case study</small><span class="arr">Read the case study &rarr;</span></div><div class="g-stat"><strong>$95,690</strong><b>Billed invoice value traced to Cactus calls</b><span>40 July invoices across 30 unique customers whose calls Cactus handled.</span></div></a>
+        <a class="g g-logo" href="https://www.oncactus.com/hvac-case-study" target="_blank" rel="noopener" aria-label="Read the Mighty Air case study"><img style="width:28%" src="logos/mighty-air.png" alt="Mighty Air logo"><div class="cap"><small>Case study</small><span class="arr">Read the case study &rarr;</span></div><div class="g-stat"><strong>$36,226</strong><b>Billed invoice value traced to Cactus calls</b><span>50 July invoices across 34 unique customers whose calls Cactus handled.</span></div></a>
+        <a class="g g-logo" href="https://www.oncactus.com/construction-case-study" target="_blank" rel="noopener" aria-label="Read the GreenCal Construction case study"><img style="width:48%" src="logos/greencal.png" alt="GreenCal Construction logo"><div class="cap"><small>Case study</small><span class="arr">Read the case study &rarr;</span></div><div class="g-stat"><strong>$66,660</strong><b>Billed invoice value traced to Cactus calls</b><span>4 July invoices across 4 unique customers whose calls Cactus handled.</span></div></a>
       </div>
       <div class="tmonials">
         <h3>Video testimonials</h3>
